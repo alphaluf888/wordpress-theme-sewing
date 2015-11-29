@@ -40,6 +40,7 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
                     </button>
 
                   </div>
@@ -47,14 +48,15 @@
                   <div class="collapse navbar-collapse" id="navbar-home">
                     <ul class="nav navbar-nav">
                       <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                      <li><a href="#">About Us</a></li>
                       <li><a href="#">Products</a></li>
                       <li><a href="#">Finished Products</a></li>
-                      <li><a href="#">News</a></li>
+                      <li><a href="#">About Us</a></li>
                       <li><a href="#">Contact Us</a></li>
                     </ul>
+
                     <p class="navbar-text navbar-right">Tel: 0086-13501780552</p>
                   </div>
+
                 </div>
               </nav>
             </header>
@@ -71,7 +73,7 @@
                 </ol>
 
                 <!-- wrapper for slides -->
-                <div class="carousel-inner" role="listbox" style="max-height: 400px;">
+                <div class="carousel-inner" role="listbox" style="max-height: 550px;">
                   <div class="item active">
                     <img src="img/1.png" alt="First product picture in top carousel slides">
 
@@ -112,42 +114,26 @@
               </p>
             </div>
             <div class="col-sm-9">
-              <h2>Product gallery</h2>
+              <h2>Product Gallery</h2>
               <hr>
               <div class="row">
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-4">
                   <a href="#" class="thumbnail">
-                    <img alt="product 1" src="img/RM-100.jpg" style="max-height:180px;">
+                    <img alt="product 1" src="img/RM-100.jpg" style="max-height:300px;">
                   </a>
                 </div>
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-4">
                   <a href="#" class="thumbnail">
-                    <img alt="product 2" src="img/RM-101.jpg" style="max-height:180px;">
+                    <img alt="product 2" src="img/RM-101.jpg" style="max-height:300px;">
                   </a>
                 </div>
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-4">
                   <a href="#" class="thumbnail">
-                    <img alt="product 3" src="img/RM-310S.jpg" style="max-height:180px;">
-                  </a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6 col-md-4">
-                  <a href="#" class="thumbnail">
-                    <img alt="product 1" src="img/RM-320S.jpg" style="max-height:180px;">
-                  </a>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                  <a href="#" class="thumbnail">
-                    <img alt="product 2" src="img/RM-326G.jpg" style="max-height:180px;">
-                  </a>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                  <a href="#" class="thumbnail">
-                    <img alt="product 3" src="img/RM-342G.jpg" style="max-height:180px;">
+                    <img alt="product 3" src="img/RM-310S.jpg" style="max-height:300px;">
                   </a>
                 </div>
               </div>
+
             </div>
           </div>
           <div class="row">
@@ -160,39 +146,62 @@
               <p>Mobile: 0086-13501780552</p>
             </div>
             <div class="col-sm-9">
-              <h2>Effect showcase slides</h2>
-              <hr>
-              <div id="owl-product-effects" class="owl-carousel">
-                <div>
-                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:180px;">
+              <div class="row">
+                <div class="col-md-4">
+                  <a href="#" class="thumbnail">
+                    <img alt="product 1" src="img/RM-320S.jpg" style="max-height:300px;">
+                  </a>
                 </div>
-                <div>
-                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:180px;">
+                <div class="col-md-4">
+                  <a href="#" class="thumbnail">
+                    <img alt="product 2" src="img/RM-326G.jpg" style="max-height:300px;">
+                  </a>
                 </div>
-                <div>
-                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:180px;">
-                </div>
-                <div>
-                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:180px;">
-                </div>
-                <div>
-                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:180px;">
+                <div class="col-md-4">
+                  <a href="#" class="thumbnail">
+                    <img alt="product 3" src="img/RM-342G.jpg" style="max-height:300px;">
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-
-        <div class="navbar">
-          <ul class="nav navbar-nav">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Products</li>
-            <li>Finished Products</li>
-            <li>News</li>
-            <li>Contact Us</li>
-          </ul>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>Effect showcase slides</h2>
+              <hr>
+              <div id="owl-product-effects" class="owl-carousel">
+                <div>
+                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
+                </div>
+                <div>
+                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
+                </div>
+                <div>
+                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
+                </div>
+                <div>
+                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
+                </div>
+                <div>
+                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="navbar">
+                <ul class="nav navbar-nav list-inline">
+                  <li>Home</li>
+                  <li>About Us</li>
+                  <li>Products</li>
+                  <li>Finished Products</li>
+                  <li>News</li>
+                  <li>Contact Us</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
         <script src="js/vendor/bootstrap.min.js"></script>
