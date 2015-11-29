@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("#owl-product-effects").owlCarousel({
-    items: 3,
-    autoPlay: true
+    items: 4,
+    autoPlay: true,
+    pagination: false
   });
 });
