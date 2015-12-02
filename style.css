@@ -10,3 +10,9 @@ Text Domain:        sage
 License:            MIT License
 License URI:        http://opensource.org/licenses/MIT
 */
+@import url('css/normalize.css');
+@import url('css/main.css');
+@import url('css/bootstrap.min.css');
+@import url('css/bootstrap-theme.min.css');
+@import url('js/vendor/owl-carousel/owl.carousel.css');
+@import url('js/vendor/owl-carousel/owl.theme.css');

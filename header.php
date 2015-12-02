@@ -19,14 +19,8 @@
 
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 		<!-- Place favicon.ico in the root directory -->
+		<link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet" >
 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="js/vendor/owl-carousel/owl.carousel.css">
-		<link rel="stylesheet" href="js/vendor/owl-carousel/owl.theme.css">
-		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
-		<script src="js/vendor/jquery-1.11.3.min.js"></script>
+		<?php wp_head();?>
 </head>
 <body>
