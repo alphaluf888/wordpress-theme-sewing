@@ -1,25 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php get_header(); ?>
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="js/vendor/owl-carousel/owl.carousel.css">
-        <link rel="stylesheet" href="js/vendor/owl-carousel/owl.theme.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="js/vendor/jquery-1.11.3.min.js"></script>
-    </head>
-    <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -49,7 +29,7 @@
                     <ul class="nav navbar-nav">
                       <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
                       <li><a href="#">Products</a></li>
-                      <li><a href="#">Finished Products</a></li>
+                      <li><a href="#">Factory Gallery</a></li>
                       <li><a href="#">About Us</a></li>
                       <li><a href="#">Contact Us</a></li>
                     </ul>
@@ -73,7 +53,7 @@
                 </ol>
 
                 <!-- wrapper for slides -->
-                <div class="carousel-inner" role="listbox" style="max-height: 550px;">
+                <div class="carousel-inner" role="listbox" style="max-height: 400px;">
                   <div class="item active">
                     <img src="img/1.png" alt="First product picture in top carousel slides">
 
@@ -140,10 +120,12 @@
             <div class="col-sm-3">
               <h2>Contact us</h2>
               <hr>
-              <p>Address: NO.99 West Beijing Road, XinYi Economic Development Park,Xuzhou,Jiangsu Province, China</p>
-              <p>Tel: 0516-88593698   Fax: 0516-81610389</p>
-              <p>Email: sewingindustries@163.com</p>
-              <p>Mobile: 0086-13501780552</p>
+              <h4>Rambo Sewing Equipment Manufacturing Co. Ltd</h4>
+              <p><strong>Address: </strong>NO.99 West Beijing Road, XinYi Economic Development Park,Xuzhou,Jiangsu Province, China</p>
+              <p><strong>Tel: </strong>0516-88593698</p>
+              <p><strong>Fax: </strong>0516-81610389</p>
+              <p><strong>Email: </strong>sewingindustries@163.com</p>
+              <p><strong>Mobile: </strong>0086-13501780552</p>
             </div>
             <div class="col-sm-9">
               <div class="row">
@@ -167,9 +149,12 @@
           </div>
           <div class="row">
             <div class="col-sm-12">
-              <h2>Effect showcase slides</h2>
+              <h2>Factory Gallery</h2>
               <hr>
               <div id="owl-product-effects" class="owl-carousel">
+                <div>
+                  <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
+                </div>
                 <div>
                   <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
                 </div>
@@ -188,7 +173,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" style="background-color:#262626; color:#000000">
             <div class="col-sm-12">
               <div class="navbar">
                 <ul class="nav navbar-nav list-inline">
@@ -218,5 +203,4 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
-    </body>
-</html>
+<?php get_footer(); ?>
