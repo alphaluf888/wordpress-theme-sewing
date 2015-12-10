@@ -24,3 +24,34 @@
 		<?php wp_head();?>
 </head>
 <body>
+	<div>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img src="img/logo.png" alt="Brand" height="50">
+            </a>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-home" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbar-home">
+            <ul class="nav navbar-nav">
+              <?php wp_list_pages(array("title_li" => "")); ?>
+            </ul>
+
+            <p class="navbar-text navbar-right">Tel: 0086-13501780552</p>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+  </div>
