@@ -1,14 +1,4 @@
-<?php
-/**
- * The template for displaying the header
- *
- * Displays all of the head element and everything up until the "site-content" div.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 		<meta charset="utf-8">
@@ -24,34 +14,34 @@
 		<?php wp_head();?>
 </head>
 <body>
-	<div>
+	<!--[if lt IE 8]>
+	    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
     <header>
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-              <img src="img/logo.png" alt="Brand" height="50">
-            </a>
+			<div class="container">
+		      <nav class="navbar navbar-default">
+						<div class="container-fluid">
+		        	<div class="navbar-header">
+			            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-home" aria-expanded="false">
+			              <span class="sr-only">Toggle navigation</span>
+			              <span class="icon-bar"></span>
+			              <span class="icon-bar"></span>
+			              <span class="icon-bar"></span>
+			              <span class="icon-bar"></span>
+			            </button>
+									<a class="navbar-brand" href="#">
+										<img src="img/logo.png" alt="Brand" height="50">
+									</a>
+			          </div>
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-home" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+			          <div class="collapse navbar-collapse" id="navbar-home">
+			            <ul class="nav navbar-nav">
+			              <?php wp_list_pages(array("title_li" => "")); ?>
+			            </ul>
+			          </div>
+						</div>
+		      </nav>
 
-          </div>
-
-          <div class="collapse navbar-collapse" id="navbar-home">
-            <ul class="nav navbar-nav">
-              <?php wp_list_pages(array("title_li" => "")); ?>
-            </ul>
-
-            <p class="navbar-text navbar-right">Tel: 0086-13501780552</p>
-          </div>
-
-        </div>
-      </nav>
+			</div>
     </header>
-  </div>
