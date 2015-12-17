@@ -1,53 +1,7 @@
 <?php get_header(); ?>
 <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <?php while (have_posts()) : the_post(); ?>
-        <div id="carousel-top" class="carousel slide" data-ride="carousel">
-          <!-- indicator -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-top" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-top" data-slide-to="1"></li>
-            <li data-target="#carousel-top" data-slide-to="2"></li>
-            <li data-target="#carousel-top" data-slide-to="3"></li>
-            <li data-target="#carousel-top" data-slide-to="4"></li>
-            <li data-target="#carousel-top" data-slide-to="5"></li>
-          </ol>
-
-          <!-- wrapper for slides -->
-          <div class="carousel-inner" role="listbox" style="max-height: 400px;">
-            <div class="item active">
-                <?php $slide="slide1"; echo get_post_meta($post->ID, $slide, true); ?>
-            </div>
-            <div class="item">
-              <?php $slide="slide2"; echo get_post_meta($post->ID, $slide, true); ?>
-            </div>
-            <div class="item">
-              <?php $slide="slide3"; echo get_post_meta($post->ID, $slide, true); ?>
-            </div>
-            <div class="item">
-              <?php $slide="slide4"; echo get_post_meta($post->ID, $slide, true); ?>
-            </div>
-            <div class="item">
-              <?php $slide="slide5"; echo get_post_meta($post->ID, $slide, true); ?>
-            </div>
-            <div class="item">
-              <?php $slide="slide6"; echo get_post_meta($post->ID, $slide, true); ?>
-            </div>
-          </div>
-
-        <!-- controls -->
-        <a class="left carousel-control" href="#carousel-top" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-top" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-      <?php endwhile; ?>
-    </div>
+      <?php get_template_part('slides'); ?>
   </div>
   <div class="row">
     <div class="col-sm-3">

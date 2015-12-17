@@ -40,4 +40,11 @@ function wpbootstrap_scripts_with_main()
 }
 
 add_action('wp_enqueue_scripts', 'wpbootstrap_scripts_with_main');
+
+if(function_exists('register_nav_menus')) {
+	register_nav_menus(
+	array(
+		'header-menu' => __('导航自定义菜单')
+	));
+}
 ?>

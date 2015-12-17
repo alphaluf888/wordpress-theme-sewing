@@ -1,10 +1,12 @@
  <?php wp_footer(); ?>
   <footer>
+    <div class="container">
     <nav class="navbar navbar-default">
       <div class="container">
         <p class="text-center">Rambo Sewing Equipment Manufacturing Co., Ltd</p>
       </div>
     </nav>
+  </div>  
   </footer>
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=tEeieESUINs5Ky7ROmTUGzcR">
   </script>
