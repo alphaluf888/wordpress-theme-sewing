@@ -47,4 +47,6 @@ if(function_exists('register_nav_menus')) {
 		'header-menu' => __('导航自定义菜单')
 	));
 }
+
+add_theme_support('post-thumbnails');
 ?>

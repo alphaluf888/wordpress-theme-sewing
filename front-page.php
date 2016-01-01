@@ -1,8 +1,20 @@
 <?php get_header(); ?>
 <div class="container">
-    <div class="row">
-      <?php get_template_part('slides'); ?>
+  <div class="row">
+    <?php get_template_part('slides'); ?>
   </div>
+
+  <?php
+  $temp = $wp_query;
+  $wp_query= null;
+  $args = array(
+    'posts_per_page' => 6,
+    'category_name' => 'products'
+  );
+  $wp_query = new WP_Query($args);
+  ?>
+  <?php $count = 0; ?>
+
   <div class="row">
     <div class="col-sm-3">
       <h2>About us</h2>
@@ -18,27 +30,20 @@
     </div>
     <div class="col-sm-9">
       <h2>Product Gallery</h2>
+      <a href="http://localhost/wordpress/products/"><p class="text-right small">See More ...</p></a>
       <hr>
-      <div class="row">
-        <?php while (have_posts()) : the_post(); ?>
-        <div class="col-md-4">
-          <a href="#" class="thumbnail">
-            <?php $product="product1"; echo get_post_meta($post->ID, $product, true); ?>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="#" class="thumbnail">
-            <?php $product="product2"; echo get_post_meta($post->ID, $product, true); ?>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="#" class="thumbnail">
-            <?php $product="product3"; echo get_post_meta($post->ID, $product, true); ?>
-          </a>
-        </div>
-        <?php endwhile; ?>
-      </div>
 
+      <div class="row">
+        <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+        <?php if ($count < 3 ) { ?>
+          <div class="col-md-4">
+            <?php if ( has_post_thumbnail() ) {?>
+              <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+            <?php } ?>
+          </div>
+        <?php } ?>
+        <?php $count++; endwhile;?>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -54,65 +59,40 @@
     </div>
     <div class="col-sm-9">
       <div class="row">
-        <?php while (have_posts()) : the_post(); ?>
-        <div class="col-md-4">
-          <a href="#" class="thumbnail">
-              <?php $product="product4"; echo get_post_meta($post->ID, $product, true); ?>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="#" class="thumbnail">
-              <?php $product="product5"; echo get_post_meta($post->ID, $product, true); ?>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="#" class="thumbnail">
-              <?php $product="product6"; echo get_post_meta($post->ID, $product, true); ?>
-          </a>
-        </div>
-        <nav>
-          <ul class="pagination">
-            <li>
-              <a href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-              <a href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <?php endwhile; ?>
+        <?php $count = 0; ?>
+        <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+        <?php if ($count >= 3 ) { ?>
+          <div class="col-md-4">
+            <?php if ( has_post_thumbnail() ) {?>
+              <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+            <?php } ?>
+          </div>
+        <?php } ?>
+        <?php $count++; endwhile;?>
       </div>
     </div>
   </div>
+  <?php
+  $wp_query= null;
+  $args = array(
+    'category_name' => 'machine-video'
+  );
+  $wp_query = new WP_Query($args);
+  ?>
+  <?php $count = 0; ?>
   <div class="row">
     <div class="col-sm-12">
       <h2>Factory Gallery</h2>
       <hr>
       <div id="owl-product-effects" class="owl-carousel">
-        <div>
-          <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
-        </div>
-        <div>
-          <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
-        </div>
-        <div>
-          <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
-        </div>
-        <div>
-          <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
-        </div>
-        <div>
-          <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
-        </div>
+        <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+          <div style="max-height:200px;">
+            <?php if ( has_post_thumbnail() ) {?>
+              <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+            <?php } ?>
+          </div>
+        <?php endwhile;?>
+
         <div>
           <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
         </div>
