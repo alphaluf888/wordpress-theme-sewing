@@ -10,12 +10,13 @@
         <?php wp_list_categories(array("title_li" => "", "orderby" => "ID", "exclude" => "1,3", "hide_empty" => 0)); ?>
       </ul>
     </div>
-
-    <?php while (have_posts()) : the_post(); ?>
-    <div class="col-sm-9">
-      <?php the_content(); ?>
-    </div>
-    <?php endwhile;?>
+    <?php if (have_posts()) {?>
+      <?php while (have_posts()) : the_post(); ?>
+      <div class="col-sm-9">
+        <?php the_content(); ?>
+      </div>
+      <?php endwhile;?>
+    <?php }?>
   </div>
 </div>
 
