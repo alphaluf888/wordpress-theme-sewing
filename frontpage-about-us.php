@@ -2,7 +2,7 @@
   <?php
       $wp_query= null;
       $args = array(
-        'pagename' => 'slides'
+        'pagename' => 'about-us'
       );
       $wp_query = new WP_Query($args);
   ?>

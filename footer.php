@@ -6,10 +6,10 @@
         <p class="text-center">Rambo Sewing Equipment Manufacturing Co., Ltd</p>
       </div>
     </nav>
-  </div>  
+  </div>
   </footer>
-  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=tEeieESUINs5Ky7ROmTUGzcR">
-  </script>
+  <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=tEeieESUINs5Ky7ROmTUGzcR">
+  </script> -->
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

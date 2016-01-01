@@ -3,31 +3,20 @@
   <div class="row">
     <?php get_template_part('slides'); ?>
   </div>
-
-  <?php
-  $temp = $wp_query;
-  $wp_query= null;
-  $args = array(
-    'posts_per_page' => 6,
-    'category_name' => 'products'
-  );
-  $wp_query = new WP_Query($args);
-  ?>
-  <?php $count = 0; ?>
-
   <div class="row">
     <div class="col-sm-3">
-      <h2>About us</h2>
-      <hr>
-      <p>
-        This is the about us section.
-        This is the about us section.
-        This is the about us section.
-        This is the about us section.
-        This is the about us section.
-        This is the about us section.
-      </p>
+        <?php get_template_part('frontpage-about-us'); ?>
     </div>
+    <?php
+    $temp = $wp_query;
+    $wp_query= null;
+    $args = array(
+      'posts_per_page' => 6,
+      'category_name' => 'products'
+    );
+    $wp_query = new WP_Query($args);
+    ?>
+    <?php $count = 0; ?>
     <div class="col-sm-9">
       <h2>Product Gallery</h2>
       <a href="http://localhost/wordpress/products/"><p class="text-right small">See More ...</p></a>
@@ -82,7 +71,7 @@
   <?php $count = 0; ?>
   <div class="row">
     <div class="col-sm-12">
-      <h2>Factory Gallery</h2>
+      <h2>Machine Video</h2>
       <hr>
       <div id="owl-product-effects" class="owl-carousel">
         <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
@@ -92,10 +81,6 @@
             <?php } ?>
           </div>
         <?php endwhile;?>
-
-        <div>
-          <img src="img/RM-1014.jpg" alt="Third product picture in top carousel slides" style="max-height:200px;">
-        </div>
       </div>
     </div>
   </div>
