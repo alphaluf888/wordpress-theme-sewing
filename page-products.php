@@ -49,6 +49,7 @@
         	'total' => $wp_query->max_num_pages
         ) );
       ?>
+      <?php wp_reset_query();?>
     </p>
     <!-- <nav class="pull-right">
       <ul class="pagination">

@@ -16,6 +16,7 @@
         <?php the_content(); ?>
       </div>
       <?php endwhile;?>
+      <?php wp_reset_query();?>
     <?php }?>
   </div>
 </div>

@@ -37,14 +37,7 @@
   </div>
   <div class="row">
     <div class="col-sm-3">
-      <h2>Contact us</h2>
-      <hr>
-      <h4>Rambo Sewing Equipment Manufacturing Co. Ltd</h4>
-      <p><strong>Address: </strong>NO.99 West Beijing Road, XinYi Economic Development Park,Xuzhou,Jiangsu Province, China</p>
-      <p><strong>Tel: </strong>0516-88593698</p>
-      <p><strong>Fax: </strong>0516-81610389</p>
-      <p><strong>Email: </strong>sewingindustries@163.com</p>
-      <p><strong>Mobile: </strong>0086-13501780552</p>
+      <?php get_template_part('frontpage-contact-us'); ?>
     </div>
     <div class="col-sm-9">
       <div class="row">
