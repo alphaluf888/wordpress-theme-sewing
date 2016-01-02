@@ -15,7 +15,7 @@
     $args = array(
       'posts_per_page' => 6,
       'category_name' => 'products',
-      'paged' => $paged,
+      'paged' => $paged
     );
     $wp_query = new WP_Query( $args );
     ?>

@@ -15,7 +15,7 @@
     $args = array(
       'posts_per_page' => 6,
       'category_name' => 'machine-video',
-      'paged' => $paged,
+      'paged' => $paged
     );
     $wp_query = new WP_Query( $args );
     ?>
@@ -24,13 +24,13 @@
     <?php if (($count == 0) or ($count % 3 != 0)) { ?>
       <div class="col-sm-3">
         <?php if ( has_post_thumbnail() ) {?>
-          <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+          <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(array(150, 150)); ?></a>
         <?php } ?>
       </div>
     <?php } else { ?>
       <div class="col-sm-3 col-sm-offset-3">
         <?php if ( has_post_thumbnail() ) {?>
-          <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+          <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(array(150, 150)); ?></a>
         <?php } ?>
       </div>
     <?php }?>
