@@ -6,8 +6,7 @@
   <div class="row">
     <div class="col-sm-3">
       <ul class="nav nav-pills nav-stacked">
-        <!-- <li role="presentation" class="active"><a href="#">Home</a></li> -->
-        <?php wp_list_categories(array("title_li" => "", "orderby" => "ID", "exclude" => "1,3", "hide_empty" => 0)); ?>
+        <?php wp_list_categories('include=3&orderby=ID&order=DESC&hide_empty=1&title_li='); ?>
       </ul>
     </div>
 
