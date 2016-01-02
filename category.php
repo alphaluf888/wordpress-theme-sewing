@@ -11,12 +11,28 @@
       </ul>
     </div>
 
-    <?php while (have_posts()) : the_post(); ?>
-    <div class="col-sm-9">
-      <?php the_content(); ?>
-    </div>
-    <?php endwhile;?>
+    <?php if (have_posts()) {?>
+      <?php while (have_posts()) : the_post(); ?>
+      <div class="col-sm-3">
+        <?php the_content(); ?>
+      </div>
+      <?php endwhile;?>
+    <?php }?>
   </div>
-</div>
+  <div class="row">
+    <p class="pull-right">
+      <?php
+        $big = 999999999; // need an unlikely integer
+
+        echo paginate_links( array(
+        	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        	'format' => '?paged=%#%',
+        	'current' => max( 1, get_query_var('paged') ),
+        	'total' => $wp_query->max_num_pages
+        ) );
+      ?>
+      <?php wp_reset_query();?>
+    </p>
+  </div>
 
 <?php get_footer(); ?>

@@ -37,7 +37,8 @@
 
 			          <div class="collapse navbar-collapse" id="navbar-home">
 			            <ul class="nav navbar-nav">
-			              <?php wp_list_pages(array('title_li' => '','exclude' => '69')); ?>
+			              <!-- <?php wp_list_pages(array('title_li' => '','exclude' => '69')); ?> -->
+										<?php wp_list_pages(array('title_li' => '','exclude' => '20')); ?>
 			            </ul>
 			          </div>
 								<div class="navbar-right"><?php echo qtrans_generateLanguageSelectCode('both'); ?></div>

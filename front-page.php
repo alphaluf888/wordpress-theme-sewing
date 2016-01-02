@@ -19,7 +19,7 @@
     <?php $count = 0; ?>
     <div class="col-sm-9">
       <h2>Product Gallery</h2>
-      <a href="http://localhost/wordpress/products/"><p class="text-right small">See More ...</p></a>
+      <a href="./products/"><p class="text-right small">See More ...</p></a>
       <hr>
 
       <div class="row">
