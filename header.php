@@ -31,7 +31,9 @@
 										<?php } ?>
 			            </button>
 									<a class="navbar-brand" href="#">
-										<img src="http://localhost/wordpress/wp-content/uploads/2015/12/web-brand-alpha.png" alt="Brand" height="50">
+										<?php $upload_dir = wp_upload_dir(); ?>
+
+										<img src="<?php echo $upload_dir['baseurl']; ?>/2016/01/web-brand-alpha.png" alt="Brand" height="50">
 									</a>
 			          </div>
 

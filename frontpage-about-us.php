@@ -10,7 +10,7 @@
     <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
       <?php the_content(); ?>
     <?php endwhile;?>
-    <?php wp_reset_postdata();?>
+    <?php wp_reset_query();?>
   <?php } else {?>
     no content
   <?php }?>

@@ -57,14 +57,14 @@
   <?php
   $wp_query= null;
   $args = array(
-    'category_name' => 'machine-video'
+    'category_name' => 'factory-gallery'
   );
   $wp_query = new WP_Query($args);
   ?>
   <?php $count = 0; ?>
   <div class="row">
     <div class="col-sm-12">
-      <h2>Machine Video</h2>
+      <h2>Factory Gallery</h2>
       <hr>
       <div id="owl-product-effects" class="owl-carousel">
         <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
