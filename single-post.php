@@ -19,7 +19,7 @@
           }
 
           if ($category_type <> null) {
-            wp_list_categories('exclude=3&orderby=ID&order=DESC&hide_empty=1&title_li=');
+            wp_list_categories('exclude=12&orderby=ID&order=DESC&hide_empty=1&title_li=');
           }else {
             wp_list_categories('include=3&orderby=ID&order=DESC&hide_empty=1&title_li=');
           }

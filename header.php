@@ -19,7 +19,19 @@
 	<![endif]-->
 
     <header>
-			<div class="container">
+			<div class="container" >
+				<nav class="navbar navbar-default" style="margin-bottom: 2px;">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
+							<a class="navbar-brand" href="#">
+								<?php $upload_dir = wp_upload_dir(); ?>
+								<img src="<?php echo $upload_dir['baseurl']; ?>/2016/02/web-logo.png" alt="Brand" height="30">
+							</a>
+							<p class="navbar-text text-right">Rambo Sewing Equipment</p>
+							<div class="navbar-right"><?php echo qtrans_generateLanguageSelectCode('both'); ?></div>
+				    </div>
+				  </div>
+				</nav>
 		      <nav class="navbar navbar-default">
 						<div class="container-fluid">
 		        	<div class="navbar-header">
@@ -30,20 +42,15 @@
 											<span class="icon-bar"></span>
 										<?php } ?>
 			            </button>
-									<a class="navbar-brand" href="#">
-										<?php $upload_dir = wp_upload_dir(); ?>
-
-										<img src="<?php echo $upload_dir['baseurl']; ?>/2016/01/web-brand-alpha.png" alt="Brand" height="50">
-									</a>
 			          </div>
 
 			          <div class="collapse navbar-collapse" id="navbar-home">
 			            <ul class="nav navbar-nav">
 			              <!-- <?php wp_list_pages(array('title_li' => '','exclude' => '69')); ?> -->
-										<?php wp_list_pages(array('title_li' => '','exclude' => '20')); ?>
+										<?php wp_list_pages(array('title_li' => '','exclude' => '8,9,26')); ?>
 			            </ul>
 			          </div>
-								<div class="navbar-right"><?php echo qtrans_generateLanguageSelectCode('both'); ?></div>
+
 						</div>
 		      </nav>
 

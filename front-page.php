@@ -12,7 +12,9 @@
     $wp_query= null;
     $args = array(
       'posts_per_page' => 6,
-      'category_name' => 'products'
+      'category_name' => 'products',
+      'orderby' =>'title',
+      'order' => 'ASC'
     );
     $wp_query = new WP_Query($args);
     ?>
@@ -27,7 +29,7 @@
         <?php if ($count < 3 ) { ?>
           <div class="col-md-4">
             <?php if ( has_post_thumbnail() ) {?>
-              <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+              <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?><?php the_title(); ?></a>
             <?php } ?>
           </div>
         <?php } ?>
@@ -46,7 +48,7 @@
         <?php if ($count >= 3 ) { ?>
           <div class="col-md-4">
             <?php if ( has_post_thumbnail() ) {?>
-              <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+              <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?><?php the_title(); ?></a>
             <?php } ?>
           </div>
         <?php } ?>
@@ -68,7 +70,7 @@
       <hr>
       <div id="owl-product-effects" class="owl-carousel">
         <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-          <div style="max-height:200px;">
+          <div style="max-height:150px;">
             <?php if ( has_post_thumbnail() ) {?>
               <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
             <?php } ?>

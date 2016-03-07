@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-sm-3">
       <ul class="nav nav-pills nav-stacked">
-        <?php wp_list_categories('exclude=3&orderby=ID&order=DESC&hide_empty=1&title_li='); ?>
+        <?php wp_list_categories('exclude=12&orderby=ID&order=DESC&hide_empty=1&title_li='); ?>
       </ul>
     </div>
 
@@ -24,13 +24,13 @@
     <?php if (($count == 0) or ($count % 3 != 0)) { ?>
       <div class="col-sm-3">
         <?php if ( has_post_thumbnail() ) {?>
-          <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+          <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?><?php the_title(); ?></a>
         <?php } ?>
       </div>
     <?php } else { ?>
       <div class="col-sm-3 col-sm-offset-3">
         <?php if ( has_post_thumbnail() ) {?>
-          <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
+          <a class="thumbnail" href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?><?php the_title(); ?></a>
         <?php } ?>
       </div>
     <?php }?>
